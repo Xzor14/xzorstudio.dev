@@ -1,12 +1,15 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+
   server: {
-    host: true, // Agar bisa diakses via IP Lokal jika perlu
+    host: true,
     port: 5173
+  },
+
+  build: {
+    target: 'es2022'
   }
 })
-
